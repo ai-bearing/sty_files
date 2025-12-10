@@ -1,0 +1,10 @@
+% homework.sty
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{homework}
+
+\RequirePackage[most]{tcolorbox}
+
+\tcolorboxenvironment{problem}{ blanker, breakable, left=4mm,before skip=6pt, after skip=6pt, borderline west={1pt}{0pt}{red} }
+\tcolorboxenvironment{exercise}{ blanker, breakable, left=4mm,before skip=6pt, after skip=6pt, borderline west={1pt}{0pt}{red} }
+\tcolorboxenvironment{solution}{ blanker, breakable, left=4mm, before skip=6pt, after skip=6pt, borderline west={1pt}{0pt}{green!75!black} }
+\tcolorboxenvironment{aside}{ blanker, breakable, left=4mm, before skip=6pt, after skip=6pt, borderline west={1pt}{0pt}{black!50!white} }

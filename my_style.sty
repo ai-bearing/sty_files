@@ -1,0 +1,145 @@
+\ProvidesPackage{my_style}
+
+\usepackage[shortlabels]{enumitem}
+
+%paper setup
+\usepackage{geometry}
+\geometry{letterpaper, portrait, margin=1in}
+\usepackage{fancyhdr}
+
+%symbols
+\usepackage{amsmath}
+\usepackage{bigints}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{epigraph}
+\usepackage{dsfont}
+\usepackage[dvipsnames]{xcolor}
+
+\usepackage[colorlinks=true,urlcolor=RoyalBlue,filecolor=black,citecolor=black,linkcolor=black]{hyperref} %hyperlinks
+\usepackage{gensymb} %more symbols
+\usepackage{multirow,array} %better tables
+\usepackage{multicol} %multiple columns per page
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{braket}
+\usetikzlibrary{cd}
+\tikzset{middleweight/.style={pos = 0.5}}
+
+\usepackage{tikz-3dplot}
+\usetikzlibrary{angles, quotes, intersections}
+
+\tikzset{axis/.style={thick,-latex}}
+\tikzset{vec/.style={thick,blue}}
+\tikzset{univec/.style={thick,red,-latex}}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+
+\setlength{\parindent}{0pt} %I don't like indentation
+\usepackage{cancel} %better X-throughs
+\pagestyle{fancy} %better headers
+
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\F}{\mathbb{F}}
+\newcommand{\D}{\mathbb{D}}
+\newcommand{\1}{\mathds{1}}
+
+\usepackage{mleftright}
+\renewcommand{\left}{\mleft}
+\renewcommand{\right}{\mright}
+
+%common other symbols
+\newcommand{\mcc}{\mathcal{C}} %cantor set
+\newcommand{\mco}{\mathcal{O}} %holomorphic functions
+\newcommand{\mfp}{\mathfrak{p}} %prime ideal
+
+%inner products and norms
+\newcommand{\iprod}[2]{\left\langle #1,#2\right\rangle}
+\newcommand{\norm}[1]{\left\Vert #1\right\Vert}
+\renewcommand{\set}[1]{\Set{\!#1\!}}
+\newcommand{\ve}{\varepsilon}
+\newcommand{\ds}{\displaystyle}
+\DeclareMathOperator*{\esssup}{ess\,sup}
+\DeclareMathOperator{\re}{Re}
+\DeclareMathOperator{\im}{Im}
+\DeclareMathOperator{\img}{im}
+\DeclareMathOperator{\lcm}{lcm}
+\DeclareMathOperator{\Span}{span}
+\DeclareMathOperator{\Card}{card}
+\DeclareMathOperator{\Dim}{dim}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\op}{op}
+\DeclareMathOperator{\dist}{dist}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\Ran}{ran}
+\DeclareMathOperator{\stab}{stab}
+\DeclareMathOperator{\Stab}{stab}
+\DeclareMathOperator{\aut}{aut}
+\DeclareMathOperator{\Aut}{aut}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\sym}{Sym}
+\DeclareMathOperator{\Sym}{Sym}
+\DeclareMathOperator{\Mat}{Mat}
+\DeclareMathOperator{\GL}{GL}
+\DeclareMathOperator{\SL}{SL}
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\Tr}{Tr}
+\DeclareMathOperator{\res}{Res}
+\DeclareMathOperator{\Res}{Res}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\Ord}{ord}
+
+\newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\diff}[2]{\frac{d #1}{d #2}}
+
+
+\newtheoremstyle{main}
+  {}%
+  {}%
+  {}%
+  {}%
+  {\bfseries}%
+  {:}%
+  { }%
+  {}%
+\newtheoremstyle{note}
+  {}%
+  {}%
+  {\small}%
+  {}%
+  {\bfseries}%
+  {:}%
+  { }%
+  {}%
+\theoremstyle{main}
+\newtheorem*{theorem}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{corollary}{Corollary}
+\newtheorem*{proposition}{Proposition}
+\newtheorem*{definition}{Definition}
+\newtheorem*{example}{Example}
+\newtheorem*{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem*{exercise}{Exercise}
+\newtheorem*{method}{Method}
+\theoremstyle{note}
+\newtheorem*{note}{Note}
+\newtheorem*{remark}{Remark}
+\newtheorem*{claim}{Claim}
+\newtheorem*{aside}{Aside}
+
+\usepackage[document]{ragged2e}
+\usepackage{microtype}
+\renewcommand{\newline}{\hfill\break}
+\renewcommand{\thefootnote}{\Roman{footnote}}
+\allowdisplaybreaks

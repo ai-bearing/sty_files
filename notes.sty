@@ -1,0 +1,16 @@
+% homework.sty
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{notes}
+\renewcommand{\mathbb}{\mathds}
+
+\RequirePackage[most]{tcolorbox}
+
+\tcolorboxenvironment{definition}{ blanker, breakable, left=4mm, before skip=6pt, after skip=6pt, borderline west={1pt}{0pt}{green!75!black} }
+\tcolorboxenvironment{theorem}{ blanker, breakable, left=4mm, before skip=6pt, after skip=6pt, borderline west={1pt}{0pt}{blue!50!black} }
+\tcolorboxenvironment{proposition}{ blanker, breakable, left=4mm, before skip=6pt, after skip=6pt, borderline west={1pt}{0pt}{blue!50!black} }
+\tcolorboxenvironment{lemma}{ blanker, breakable, left=4mm, before skip=6pt, after skip=6pt, borderline west={1pt}{0pt}{blue!50!black} }
+\tcolorboxenvironment{corollary}{ blanker, breakable, left=4mm, before skip=6pt, after skip=6pt, borderline west={1pt}{0pt}{blue!50!black} }
+\tcolorboxenvironment{proof}{ blanker, breakable, left=4mm, before skip=6pt, after skip=6pt, borderline west={1pt}{0pt}{gray} }
+\tcolorboxenvironment{remark}{ blanker, breakable, left=4mm, before skip=6pt, after skip=6pt, borderline west={1pt}{0pt}{blue!50!white} }
+\tcolorboxenvironment{note}{ blanker, breakable, left=4mm, before skip=6pt, after skip=6pt, borderline west={1pt}{0pt}{gray} }
+\tcolorboxenvironment{example}{ blanker, breakable, left=4mm, before skip=6pt, after skip=6pt, borderline west={1pt}{0pt}{gray} }
