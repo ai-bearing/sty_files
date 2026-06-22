@@ -52,11 +52,17 @@
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\M}{\mathbb{M}}
 \newcommand{\D}{\mathbb{D}}
-\newcommand{\1}{\mathds{1}}
+\ifdefined\HCode
+  \newcommand{\1}{\mathbb{1}}
+\else
+  \newcommand{\1}{\mathds{1}}
+\fi
 
 \usepackage{mleftright}
-\renewcommand{\left}{\mleft}
-\renewcommand{\right}{\mright}
+\ifdefined\HCode\else
+  \renewcommand{\left}{\mleft}
+  \renewcommand{\right}{\mright}
+\fi
 
 %common other symbols
 \newcommand{\mcc}{\mathcal{C}} %cantor set
@@ -145,7 +151,7 @@
 \newtheorem*{solution}{Solution}
 \newtheorem*{exercise}{Exercise}
 \newtheorem*{method}{Method}
-\theoremstyle{note}
+%\theoremstyle{note}
 \newtheorem*{note}{Note}
 \newtheorem*{remark}{Remark}
 \newtheorem*{claim}{Claim}
@@ -153,6 +159,8 @@
 
 \usepackage[document]{ragged2e}
 \usepackage{microtype}
-\renewcommand{\newline}{\hfill\break}
+\ifdefined\HCode\else
+  \renewcommand{\newline}{\hfill\break}
+\fi
 \renewcommand{\thefootnote}{\Roman{footnote}}
 \allowdisplaybreaks

@@ -1,8 +1,14 @@
+% exposition.sty
 \ProvidesPackage{exposition}
 
-\RequirePackage[most]{tcolorbox}
+\ifdefined\HCode
+  % HTML build (tex4ht): keep real \mathbb (MathML/MathJax know it; \mathds
+  % does not map cleanly), and skip tcolorbox -- the .cfg styles the boxes.
+\else
+  \RequirePackage[most]{tcolorbox}
 
-\renewcommand{\mathbb}{\mathds}
-\tcolorboxenvironment{problem}{ blanker, breakable, left=4mm,before skip=6pt, after skip=6pt, borderline west={1pt}{0pt}{red} }
-\tcolorboxenvironment{exercise}{ blanker, breakable, left=4mm,before skip=6pt, after skip=6pt, borderline west={1pt}{0pt}{red} }
-\tcolorboxenvironment{solution}{ blanker, breakable, left=4mm, before skip=6pt, after skip=6pt, borderline west={1pt}{0pt}{green!75!black} }
+  \renewcommand{\mathbb}{\mathds}
+  \tcolorboxenvironment{problem}{ blanker, breakable, left=4mm,before skip=6pt, after skip=6pt, borderline west={1pt}{0pt}{red} }
+  \tcolorboxenvironment{exercise}{ blanker, breakable, left=4mm,before skip=6pt, after skip=6pt, borderline west={1pt}{0pt}{red} }
+  \tcolorboxenvironment{solution}{ blanker, breakable, left=4mm, before skip=6pt, after skip=6pt, borderline west={1pt}{0pt}{green!75!black} }
+\fi
