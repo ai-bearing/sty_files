@@ -14,7 +14,7 @@
 \usepackage{amsthm}
 \usepackage{mathtools}
 \usepackage{epigraph}
-\usepackage{dsfont}
+%\usepackage{dsfont}
 \usepackage[dvipsnames]{xcolor}
 
 \usepackage[colorlinks=true,urlcolor=RoyalBlue,filecolor=black,citecolor=black,linkcolor=black]{hyperref} %hyperlinks
@@ -52,10 +52,11 @@
 \newcommand{\F}{\mathbb{F}}
 \newcommand{\M}{\mathbb{M}}
 \newcommand{\D}{\mathbb{D}}
+\newcommand{\K}{\mathbb{K}}
 \ifdefined\HCode
-  \newcommand{\1}{\mathbb{1}}
+  \newcommand{\1}{\mathbf{1}}
 \else
-  \newcommand{\1}{\mathds{1}}
+  \newcommand{\1}{\mathbf{1}}
 \fi
 
 \usepackage{mleftright}
@@ -64,19 +65,17 @@
   \renewcommand{\right}{\mright}
 \fi
 
-%common other symbols
-\newcommand{\mcc}{\mathcal{C}} %cantor set
-\newcommand{\mco}{\mathcal{O}} %holomorphic functions
-\newcommand{\mfp}{\mathfrak{p}} %prime ideal
-
 %inner products and norms
+\newcommand{\dangle}[1]{\left\langle\!\left\langle #1 \right\rangle\!\right\rangle}
 \newcommand{\iprod}[2]{\left\langle #1,#2\right\rangle}
 \newcommand{\norm}[1]{\left\Vert #1\right\Vert}
 \renewcommand{\set}[1]{\Set{\!#1\!}}
 \newcommand{\ve}{\varepsilon}
 \newcommand{\ds}{\displaystyle}
+% various symbols
+% general capitalization rule: quantities (except for real/imaginary part), sets, and functions are lowercase (except for non-normalized trace), groups are uppercase
 \DeclareMathOperator*{\esssup}{ess\,sup}
-\DeclareMathOperator*{\essran}{ess\,ran}
+\DeclareMathOperator*{\essran}{ess\,range}
 \DeclareMathOperator{\re}{Re}
 \DeclareMathOperator{\im}{Im}
 \DeclareMathOperator{\img}{im}
@@ -86,37 +85,47 @@
 \DeclareMathOperator{\Dim}{dim}
 \DeclareMathOperator{\dom}{dom}
 \DeclareMathOperator{\Dom}{dom}
-\DeclareMathOperator{\ran}{ran}
+\DeclareMathOperator{\Ran}{range}
+\DeclareMathOperator{\ran}{range}
+\DeclareMathOperator{\range}{range}
+\DeclareMathOperator{\Range}{range}
+\DeclareMathOperator{\graph}{graph}
 \DeclareMathOperator{\coker}{coker}
 \DeclareMathOperator{\Coker}{coker}
-\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\ball}{ball}
 \DeclareMathOperator{\supp}{supp}
 \DeclareMathOperator{\op}{op}
 \DeclareMathOperator{\dist}{dist}
 \DeclareMathOperator{\sgn}{sgn}
-\DeclareMathOperator{\Ran}{ran}
-\DeclareMathOperator{\stab}{stab}
-\DeclareMathOperator{\Stab}{stab}
+\DeclareMathOperator{\stab}{Stab} %stabilizer s
+\DeclareMathOperator{\Stab}{Stab}
 \DeclareMathOperator{\aut}{Aut}
 \DeclareMathOperator{\Aut}{Aut}
 \DeclareMathOperator{\Gal}{Gal}
 \DeclareMathOperator{\gal}{Gal}
 \DeclareMathOperator{\Hom}{Hom}
+\renewcommand{\hom}{\Hom}
+\DeclareMathOperator{\proj}{proj} %Projection onto a specified space
+\DeclareMathOperator{\Proj}{Proj} %Projection lattice of a von neumann algebra
 \DeclareMathOperator{\id}{id}
 \DeclareMathOperator{\sym}{Sym}
 \DeclareMathOperator{\Sym}{Sym}
 \DeclareMathOperator{\Mat}{Mat}
 \DeclareMathOperator{\GL}{GL}
 \DeclareMathOperator{\SL}{SL}
-\DeclareMathOperator{\tr}{tr}
-\DeclareMathOperator{\Tr}{Tr}
-\DeclareMathOperator{\res}{Res}
-\DeclareMathOperator{\Res}{Res}
-\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\tr}{tr} %normalized trace
+\DeclareMathOperator{\Tr}{Tr} %non-normalized trace
+\DeclareMathOperator{\res}{res} %residue
+\DeclareMathOperator{\Res}{Res} %restricted representation
+\DeclareMathOperator{\ind}{ind}
+\DeclareMathOperator{\Ind}{Ind} %induced representation
+\DeclareMathOperator{\ord}{ord} 
 \DeclareMathOperator{\Ord}{ord}
 \DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\ext}{ext}
 \DeclareMathOperator{\sa}{s.a.}
-\DeclareMathOperator{\graph}{graph}
+\DeclareMathOperator{\sech}{sech}
+\DeclareMathOperator{\csch}{csch}
 
 \newcommand{\pd}[2]{\frac{\partial #1}{\partial #2}}
 \newcommand{\diff}[2]{\frac{d #1}{d #2}}
